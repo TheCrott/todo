@@ -2,7 +2,8 @@
 
 <p>
   <strong>Context:</strong>
-  <%= @task.context %>
+  <%= @task.context %><br />
+  <strong>State:</strong> <%= @task.state %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
