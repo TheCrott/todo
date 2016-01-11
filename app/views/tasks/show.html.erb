@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Context:</strong>
-  <%= @task.context %><br />
-  <strong>State:</strong> <%= @task.state %>
+  <strong>Context: </strong> <%= @task.context %><br />
+  <strong>State: </strong><%= @task.state %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |

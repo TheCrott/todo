@@ -10,11 +10,13 @@ class TasksController < ApplicationController
     @to_do = current_user.tasks.where(state: "to_do")
     @doing = current_user.tasks.where(state: "doing")
     @done = current_user.tasks.where(state: "done")
+    respond_with(@tasks)
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    respond_with(@tasks)
   end
 
   # GET /tasks/new
@@ -81,6 +83,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:content, :state)
+      params.require(:task).permit(:context, :state)
     end
 end
